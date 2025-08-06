@@ -89,8 +89,6 @@ More insights in the `/docs/business_questions.md`.
 │ ├── schema.sql
 │ ├── stored_procedures.sql
 │ └── sample_queries.sql
-├── /images/
-│ └── banner.png
 ├── requirements.txt
 └── README.md
 ```

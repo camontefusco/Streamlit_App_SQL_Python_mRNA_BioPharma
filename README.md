@@ -3,7 +3,7 @@
 
 **An interactive, multi-page Streamlit app for exploring synthetic data on mRNA-based vaccine trials, shipments, contracts, coverage, and adverse events. Built for non-coders in pharmaceutical and public health roles.**
 
-![banner](path/to/banner.png) <!-- Replace with actual banner file path -->
+![Banner](banner.png)
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/your-username/SQL_Tableau_mRNA_BioPharma_DB/main/app.py)
 ![License](https://img.shields.io/badge/license-MIT-blue)

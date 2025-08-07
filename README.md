@@ -101,7 +101,7 @@ More insights in the `/docs/business_questions.md`.
 - Python 3.9+
 - MySQL or SQLite
 - Streamlit: `pip install streamlit`
-
+```
 ### ▶️ Run App Locally
 
 ```bash
@@ -110,6 +110,7 @@ cd SQL_Tableau_mRNA_BioPharma_DB
 pip install -r requirements.txt
 streamlit run app/Home.py
 ```
+
 ## ☁️ Deploy to Streamlit Cloud
 1. Push your repo to GitHub
 2. Go to streamlit.io/cloud

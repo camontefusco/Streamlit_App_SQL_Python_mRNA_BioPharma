@@ -1,21 +1,31 @@
-country_id,country_name,income_level,population
-1,Country_1,Middle,21678443
-2,Country_2,High,62868828
-3,Country_3,Low,29711873
-4,Country_4,Low,29852685
-5,Country_5,High,41668732
-6,Country_6,Middle,22132899
-7,Country_7,Low,12336273
-8,Country_8,Low,25200396
-9,Country_9,Low,11671884
-10,Country_10,High,124130244
-11,Country_11,Middle,34793519
-12,Country_12,Middle,38669062
-13,Country_13,High,30872248
-14,Country_14,High,51429110
-15,Country_15,Middle,42833825
-16,Country_16,Low,12224730
-17,Country_17,High,75176955
-18,Country_18,Low,17748244
-19,Country_19,Low,16541238
-20,Country_20,Middle,74165461
+country_id	country_name	income_level	population	region
+1	United States	High	331002651	Americas
+2	India	Middle	1380004385	Asia
+3	China	Middle	1439323776	Asia
+4	Germany	High	83783942	Europe
+5	France	High	65273511	Europe
+6	United Kingdom	High	67886011	Europe
+7	Brazil	Middle	212559417	Americas
+8	Canada	High	37742154	Americas
+9	Australia	High	25499884	Oceania
+10	South Africa	Middle	59308690	Africa
+11	Nigeria	Low	206139589	Africa
+12	Egypt	Middle	102334404	Africa
+13	Mexico	Middle	128932753	Americas
+14	Indonesia	Middle	273523615	Asia
+15	Pakistan	Low	220892340	Asia
+16	Bangladesh	Low	164689383	Asia
+17	Russia	Middle	145934462	Europe/Asia
+18	Japan	High	126476461	Asia
+19	South Korea	High	51269185	Asia
+20	Saudi Arabia	High	34813871	Asia
+21	Argentina	Middle	45195774	Americas
+22	Colombia	Middle	50882891	Americas
+23	Spain	High	46754778	Europe
+24	Italy	High	60461826	Europe
+25	Turkey	Middle	84339067	Asia/Europe
+26	Poland	High	38386000	Europe
+27	Sweden	High	10099265	Europe
+28	Norway	High	5421241	Europe
+29	Kenya	Low	53771296	Africa
+30	Ethiopia	Low	114963588	Africa

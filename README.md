@@ -1,7 +1,7 @@
 # Streamlit_App_SQL_Python_mRNA_BioPharma
 # 🧬 mRNA Biopharma Streamlit App
 
-**An interactive, multi-page Streamlit app for exploring synthetic data on mRNA-based vaccine trials, shipments, contracts, coverage, and adverse events. Built for non-coders in pharmaceutical and public health roles.**
+**An interactive, multi-page Streamlit app for exploring synthetic mRNA vaccine data — trials, shipments, contracts, coverage, and adverse events.**
 
 ![Banner](banner.png)
 
@@ -22,23 +22,14 @@ This no-code-friendly app helps:
 
 ## 🧱 Tech Stack
 
-| Area               | Tools Used                                   |
-|--------------------|-----------------------------------------------|
-| Frontend UI        | Streamlit (multi-page app)                    |
-| Backend Database   | MySQL (schema + synthetic CSVs)               |
-| Visualization      | Plotly, PyDeck, Streamlit native charts       |
-| Geospatial Mapping | `st.map`, `pydeck` with lat/lon coordinates   |
-| Exporting Views    | PDF Export using ReportLab                    |
-
----
-
-## 🚀 Try It Live
-
-👉 **Hosted App:** [Streamlit Cloud]
-```arduino
-https://camontefusco-mrna-dashboard.streamlit.app
-```
-> _No coding required. Built for business users._
+| Area              | Tools Used                             |
+|-------------------|----------------------------------------|
+| **Frontend UI**   | Streamlit (multi-page)                 |
+| **Database**      | MySQL with SQLAlchemy ORM              |
+| **Visualization** | Plotly, PyDeck, native Streamlit charts |
+| **Mapping**       | PyDeck Choropleth + name-corrections   |
+| **Styling**       | Custom CSS: dark theme, DNA/molecule visuals |
+| Map Enhancements  | Country name alignment and time-based choropleth aggregation                |
 
 ---
 
@@ -49,19 +40,17 @@ https://camontefusco-mrna-dashboard.streamlit.app
 - 📅 Date filters and range pickers on all charts
 - 🌍 Geo Maps showing vaccine coverage and event severity by country
 - 🧠 Context-aware dropdowns (e.g., country names pulled from database)
-- 💬 Hover tips (`st.help`) and inline popovers (`ℹ️`) for guidance
-- 🧾 Export filtered views to PDF
-- 🔒 Input validations for safe, non-technical user experience
 
 ---
 
-## 🧑‍💼 Example Business Questions Answered
+## 🧑‍💼 Business Value
 
-| Role             | Sample Question                                                   |
-|------------------|-------------------------------------------------------------------|
-| Country Lead     | Which countries have the lowest coverage or delayed shipments?    |
-| Medical Officer  | Are severe adverse events more frequent in specific age groups?   |
-| Market Analyst   | Which contracts generated the most revenue per capita?            |
+| Role               | Key Insights Provided                        |
+|-------------------|-----------------------------------------------|
+| Country Lead      | Identify coverage gaps or shipment delays      |
+| Medical Officer   | Track trends in severe adverse events          |
+| Market Analyst    | Understand contract performance by country     |
+| Decision Makers   | Access visual, exportable data for briefings   |
 
 More insights in the `/docs/business_questions.md`.
 
@@ -81,23 +70,27 @@ More insights in the `/docs/business_questions.md`.
 ├── /data/
 │ ├── synthetic_countries.csv
 │ ├── synthetic_contracts.csv
-│ ├── synthetic_clinical_trials
-│ ├── synthetic_shipments
-│ ├── synthetic_vaccinations
-│ └── adverse_events
+│ ├── synthetic_clinical_trials.csv
+│ ├── synthetic_shipments.csv
+│ ├── synthetic_vaccinations.csv
+│ └── adverse_events.csv
 ├── /sql/
-│ ├── schema.sql
-│ ├── stored_procedures.sql
-│ └── sample_queries.sql
+│ ├── mRNA_BioPharma_DB_SQLSchema.sql
+│ └── SQL_queries.sql
+├── /docs/
+│ ├── Homepage.png
+│ ├── Visual Analytics.png
+│ ├── mRNA Vaccination Data Map.png
+│ └── business_questions.md
 ├── requirements.txt
 └── README.md
 ```
 
-```yaml
 ## ⚙️ Local Setup
 
 ### ✅ Prerequisites
 
+```yaml
 - Python 3.9+
 - MySQL or SQLite
 - Streamlit: `pip install streamlit`
@@ -108,26 +101,17 @@ More insights in the `/docs/business_questions.md`.
 git clone https://github.com/camontefusco/SQL_Tableau_mRNA_BioPharma_DB.git
 cd SQL_Tableau_mRNA_BioPharma_DB
 pip install -r requirements.txt
-streamlit run app/Home.py
+streamlit run app/Main.py
 ```
-
-## ☁️ Deploy to Streamlit Cloud
-1. Push your repo to GitHub
-2. Go to streamlit.io/cloud
-3. Connect your repo and choose app/Home.py as the entry point
-4. Enjoy your app — it auto-deploys on every Git push
 
 ## 🧪 Sample SQL Query
 ```sql
 -- Total contracted revenue by country
 SELECT country_name, SUM(total_doses * price_per_dose) AS total_revenue
 FROM Contracts
-JOIN Countries USING (country_id)
+JOIN countries_real USING (country_id)
 GROUP BY country_name;
 ```
-
-## 🤝 Contributing
-Pull requests welcome! For major changes, open an issue first to discuss what you’d like to change.
 
 ## 📬 Contact
 Carlos Montefusco
